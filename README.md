@@ -87,12 +87,14 @@ then --> write `node ./dist/index.js`  --> normal node script
 -----
 
 
+
 # Datatype 
 
-## Primitives Datatype: 
-- `string` 
-- `number`
-- `boolean`
+## Primitives Datatype:
+
+- ##### string
+- ##### number
+- ##### boolean
 
 ## Array 
 
@@ -119,7 +121,7 @@ const tuple: [number , number , string ] = [ 5 , 10 , "Ajay"]
 ```
 
 
-## Enums 
+## Enums ⭐⭐🤩
 
 Enums in TypeScript are a way to define a set of named constants.
 
@@ -136,6 +138,93 @@ let userDirection: Direction = Direction.North;
 if (userDirection === Direction.North) { console.log("User is moving North"); }
 
 ```
+
+
+## Any 😉
+
+Any is for making TS -> JS , It is used when we don't know the data .. 
+
+
+
+## Objects 
+
+Basic Skeleton can be provided to on-the-go objects .. 
+
+```TS
+const car: { type: string, model: string, year: number } = {    
+ // basic def of Object given ( no need of class)
+  type: "Toyota",  
+  model: "Corolla",  
+  year: 2009  
+};
+```
+
+## Union Types
+
+TypeScript’s type system allows you to build new types out of existing ones using a large variety of operators.
+
+A union type is a type formed from two or more other types, representing values that may be _any one_ of those types. 
+We refer to each of these types as the union’s _members_.
+```TS
+// A variable can be a string or a number.
+let value: string | number;
+
+// A function can take a string or a number as an argument.
+function myFunction(value: string | number) {
+}
+
+// An object can have a property that is a string or a number.
+interface MyObject {
+  value: string | number;
+}
+```
+
+#### Problems faced by Union Type : 
+##### How to determine , which fun to apply if fun is type dependent ... ? 
+
+##### Sol : No one is King here 👑 .. ( DEMOCRACY 🤘)
+==> TypeScript will only allow an operation if it is valid for _every_ member of the union. For example, if you have the union `string | number`, you can’t use methods that are only available on `string`:
+
+###### The solution is to _narrow_ the union with code
+
+```TS
+function printId(id: number | string) {
+	if (typeof id === "string") {
+	// In this branch, id is of type 'string'
+		console.log(id.toUpperCase());
+	} else {
+	// Here, id is of type 'number'
+		console.log(id);
+	}
+}
+```
+
+>[!info] How to determine Type of Array ? 
+> ==> if (Array.isArray(x))
+
+
+# Type Aliases 💫💫💫💫💫 
+
+The Structure of the Data which we want , The Kind of Data we are talking about is know as Type .. 
+
+`boolean , number , string , object ` are data-type ( types ) available by TS / JS by default
+
+🤩 We can make our own type ....... ( Ye .. Custom Type )
+
+# Functions
+
+TypeScript allows you to specify the types of both the input and output values of functions.
+
+```TS 
+function add( a : number , b : number ) : number {
+	reutrn a + b ;
+}
+```
+
+😯 Contextual typing for function - parameter s inferred to have type ( will give good suggestions based on datatype because now it know for sure about data type )
+
+
+
 
 
 # Features that I loved :
