@@ -48,7 +48,6 @@ function calculateArea3(size? : number ) : number {
     return area ;
 }
 
-console.log(calculateArea(10))
 
 
 
