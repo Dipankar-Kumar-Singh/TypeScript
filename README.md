@@ -26,7 +26,7 @@ to set up a new project :
 
 ### Most Important features / flags : 
 
-```JSON
+```text
 {
   "compilerOptions": {
     "target": "ESNext",                   Set the JavaScript language version for emitted JavaScript and include compatible library declarations. 
