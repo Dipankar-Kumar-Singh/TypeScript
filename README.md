@@ -95,6 +95,7 @@ then --> write `node ./dist/index.js`  --> normal node script
 - ##### string
 - ##### number
 - ##### boolean
+- ##### BigInt ( from ES2020 )
 
 ## Array 
 
@@ -211,6 +212,55 @@ The Structure of the Data which we want , The Kind of Data we are talking about 
 
 🤩 We can make our own type ....... ( Ye .. Custom Type )
 
+```TS
+type ID = number | string;
+type Point = {  
+	x: number;    
+	y: number; 
+};
+```
+
+
+## Interfaces
+
+An _interface declaration_ is another way to name an object type:
+```TS
+interface Point {
+	x: number;
+	y: number;
+}
+```
+
+
+#### Difference between type and Interface  ? 
+
+##### Mine Words 
+Interface ka data-schema can be changed / modified later  👌✅✅ 
+where as for Type --> NO CHNAGE of SCHEMA allowed ❌😵⚔️
+
+##### Official :
+Type aliases and interfaces are very similar, and in many cases you can choose between them freely. Almost all features of an `interface` are available in `type`, the key distinction is that a type cannot be re-opened to add new properties vs an interface which is always extendable.
+
+
+## Type Assertions ( Khud sey Specify kar do 😁😁)
+
+```TS
+const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
+// as will make conver the result it got from querySelector as HTMLSCanvasElemet --> Conversino ho gaya !!! ( )
+
+// or 
+
+const myCanvas = <HTMLCanvasElement>document.getElementById("main_canvas");
+```
+
+
+# Tips 
+## null | undefined 
+
+Writing `!` after any expression is effectively a type assertion that the value isn’t `null` or `undefined`
+
+
+
 # Functions
 
 TypeScript allows you to specify the types of both the input and output values of functions.
@@ -224,7 +274,6 @@ function add( a : number , b : number ) : number {
 😯 Contextual typing for function - parameter s inferred to have type ( will give good suggestions based on datatype because now it know for sure about data type )
 
 
-
 # Features that I loved :
 
 - **Static typing**. TypeScript is a statically typed language, which means that the types of variables and expressions are known at compile time. This can help to prevent errors and improve the readability and maintainability of code.
@@ -236,6 +285,3 @@ function add( a : number , b : number ) : number {
 - **Generics**. Generics in TypeScript can be used to create generic functions and classes. This can help to improve the type safety of code and make it more reusable.
 
 - **Modules**. TypeScript modules can be used to organize code into logical units. This can help to improve the readability and maintainability of code.
-
-
-
