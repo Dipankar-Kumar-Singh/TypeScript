@@ -34,6 +34,8 @@ const BBB = 234 ;
 let mySize: Size = Size.Large;
 
 
+// new 
+
 /////////////////////////////////////////////////////////////
 // Default Value 
 function calculateArea(size : number = 200) : number {
