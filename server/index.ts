@@ -1,6 +1,6 @@
-import { data } from  "./Data/database.js";
+// import { data } from  "./Data/database.js";
 
-data.forEach( d => console.log(d)) ;
+// data.forEach( d => console.log(d)) ;
 
 let sales: number = 12_34_14;
 let course: string = 'Dipankar Kumar Singh';
@@ -20,8 +20,6 @@ let users: [number, string] = [1, 'Dipankar'];
 // const Medium = 2
 // const large = 3
 
-//PascalCase
-
 enum Size {
 	Small = 'S',
 	Medium = 'MS',
@@ -32,5 +30,24 @@ enum Size {
 // enum Size { Small , Medium , Large }
 
 let mySize: Size = Size.Large;
+
+
+/////////////////////////////////////////////////////////////
+// Default Value 
+function calculateArea(size : number = 200) : number {
+    const area = size * size  ;
+    return area ;
+}
+
+// Can be undefined ... size can be undefines .. we are allowin it 
+function calculateArea3(size? : number ) : number {
+    const len = size ?? 0 ;
+    const area = len * len  ;
+    return area ;
+}
+
+console.log(calculateArea(10))
+
+
 
 export {};
