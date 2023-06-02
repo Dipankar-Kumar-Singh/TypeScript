@@ -7,6 +7,7 @@
 5. To understand compilation process of TypeScript and different options aval.
 6. To Play with most important features of TypeScript
 
+---
 
 ## To Setup / Configure TypeScript Project from start 
 - Typescript is not easy to setup 🥲 
@@ -55,7 +56,6 @@ First it needs to be compiled  ...
 > Ans : Compiler of TS will generate a COPY of FULL FOLDER Structure of Folder so that No import breaks , all relative path will work fine .. 
 
 
-
 - Project
 	- dist [ Folder ]
 		- compiled items ( full dir compiled )
@@ -63,3 +63,61 @@ First it needs to be compiled  ...
 		Actual Code ( TS Files )
 	- -tsconfig.json
 	- -package.json
+
+----
+
+## In Project config File : Imp Settings 
+
+```json
+{
+  "scripts": {
+    "start": "tsc && node ./dist/index.js",
+  },
+  "type": "module",
+  "exports": "./dist/index.js"
+}
+```
+
+Start --> `tsc` --> compiler command to compile the TS Project ( Full ) into Dist Folder 
+then --> write `node ./dist/index.js`  --> normal node script 
+`type : module ` --> ES6 Module ( Modern JavaScript import export statement can be used )
+
+-----
+-----
+
+
+# Datatype 
+
+## Primitives Datatype: 
+- `string` 
+- `number`
+- `boolean`
+
+## Array 
+
+```TS
+const users : string[] = ["Dipankar" , "Akash" , "Himansu" , "Ankit" , "Sammy" , "Tarun" , "Yogi" , "Sambhav" , "London" , "Pawan" , "Girish" , 
+"Koi_back_toh_nahi_gaya ?? "] 
+
+const ages: number[] = [ 20 , 21 , 20 , 23 , 55 , 6 ] ;
+
+```
+
+## Tuple  
+
+it's similar to JS array , but like C++ tuple  ( Fixed !!! --> Fixed Type with fixed positions  )
+
+```C++ 
+int main(){
+	tuple<int,int,string> t = {5 , 10 , "Ajay" } ;
+}
+```
+
+```TS
+const tuple: [number , number , string ] = [ 5 , 10 , "Ajay"]
+```
+
+
+
+# Features that I loved :
+
