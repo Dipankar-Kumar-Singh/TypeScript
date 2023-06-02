@@ -70,7 +70,7 @@ First it needs to be compiled  ...
 
 ## In Project config File : Imp Settings 
 
-```json
+```text
 {
   "scripts": {
     "start": "tsc && node ./dist/index.js",
