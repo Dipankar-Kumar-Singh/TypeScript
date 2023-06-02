@@ -1,16 +1,16 @@
 
 
-# Learnig Objective : 
+# Learning Objective : 
 1. To Setup / Configure TypeScript Project from start 
 2. To Know Syntax of TypeScript 
-3. To understand advantage of typescript
-4. To uderstand compilation process of TypeScript and different options aval.
-5. To Play with most important featues of TypeScript
+4. To understand advantage of typescript
+5. To understand compilation process of TypeScript and different options aval.
+6. To Play with most important features of TypeScript
 
 
 ## To Setup / Configure TypeScript Project from start 
 - Typescript is not easy to setup 🥲 
-	- did a lot of mistakes while playing with differnt flags options 
+	- did a lot of mistakes while playing with different flags options 
 
 to set up a new project : 
 ```Bash
@@ -19,7 +19,7 @@ to set up a new project :
 	tsc -init
 ```
 
-`tsconfig.json` file is genrated .. play with it .. 💫
+`tsconfig.json` file is generated .. play with it .. 💫
 
 ### Most Important features / flags : 
 
@@ -37,6 +37,29 @@ to set up a new project :
 ```
 
 `ESNext` ----> Latest 🔥🔥🛡️
-outdir --> in Dist ( distribution ) folder --> used for production shiping 
+`outdir` ---> in Dist ( distribution ) folder --> used for production shiping 
+`rootDir` ---> Org Server Ts Files 
+
+-----
+
+Folder Structure --> ⭐ Important step 
+
+Because it is TS ==> can't directly run on browser / or by node ..
+Thus .. 
+
+First it needs to be compiled  ... 
+
+>[!Note] What we mean by compiled 
+> It is not main.cpp file , which can be compiled into one main.a file .. 
+> It is collection of Files ... I may be importing many files in Index.js --> what will happen to the relative locations ?? 
+> Ans : Compiler of TS will generate a COPY of FULL FOLDER Structure of Folder so that No import breaks , all relative path will work fine .. 
 
 
+
+- Project
+	- dist [ Folder ]
+		- compiled items ( full dir compiled )
+	- Server
+		Actual Code ( TS Files )
+	- -tsconfig.json
+	- -package.json
