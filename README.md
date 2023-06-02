@@ -10,10 +10,12 @@
 ---
 
 ## To Setup / Configure TypeScript Project from start 
+
 - Typescript is not easy to setup 🥲 
 	- did a lot of mistakes while playing with different flags options 
 
 to set up a new project : 
+
 ```Bash
 	npm init -y 
 	npm i typescript -D 
@@ -83,7 +85,6 @@ then --> write `node ./dist/index.js`  --> normal node script
 `type : module ` --> ES6 Module ( Modern JavaScript import export statement can be used )
 
 -----
------
 
 
 # Datatype 
@@ -117,6 +118,24 @@ int main(){
 const tuple: [number , number , string ] = [ 5 , 10 , "Ajay"]
 ```
 
+
+## Enums 
+
+Enums in TypeScript are a way to define a set of named constants.
+
+Enums ( enumerations ) provide a convenient way to work with a fixed set of values in TypeScript, making the code more readable and maintainable. it's lot better than set of const values that needs to be access again and again are in a sub group 
+
+- They can also help to prevent errors, by ensuring that variables can only take on certain values.
+- You can use the `as` keyword to cast a variable to an `enum` type. This can be useful for situations where you need to check the value of an `enum` member.
+
+```TS
+enum Direction { North, South, East, West } // by default ... 0 , 1 , 2 ,3 ........
+enum Direction { North = 1, South = 2, East = 3, West = 4 } // custom values 
+
+let userDirection: Direction = Direction.North;
+if (userDirection === Direction.North) { console.log("User is moving North"); }
+
+```
 
 
 # Features that I loved :
