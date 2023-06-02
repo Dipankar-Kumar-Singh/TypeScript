@@ -25,6 +25,8 @@ enum Size {
 	Medium = 'MS',
 	Large = 'SF',
 }
+
+const BBB = 234 ;
 // By default ..... 0 , 1 , 2 , 3 .... + 1 from previous
 // enum Size { Small , Medium , Large }
 // enum Size { Small , Medium , Large }
