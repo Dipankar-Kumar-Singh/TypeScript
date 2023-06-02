@@ -225,7 +225,17 @@ function add( a : number , b : number ) : number {
 
 
 
-
-
 # Features that I loved :
+
+- **Static typing**. TypeScript is a statically typed language, which means that the types of variables and expressions are known at compile time. This can help to prevent errors and improve the readability and maintainability of code.
+
+- **Interfaces**. Interfaces in TypeScript can be used to define the contract for a class or function. This can help to ensure that code is consistent and reusable.
+
+- **Classes**. TypeScript classes are more powerful than JavaScript objects. They can have constructors, properties, methods, and events.
+
+- **Generics**. Generics in TypeScript can be used to create generic functions and classes. This can help to improve the type safety of code and make it more reusable.
+
+- **Modules**. TypeScript modules can be used to organize code into logical units. This can help to improve the readability and maintainability of code.
+
+
 
